@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+        function row(val)
+        {
+            document.getElementById("result").value +=val
+        }
+        function solve() 
+         { 
+             let x = document.getElementById("result").value 
+             let y = eval(x) 
+             document.getElementById("result").value = y 
+         } 
+        function clr()
+        {
+            document.getElementById("result").value = ""
+        }
+    </script>
+    <style>
+        input[type=button]
+        {
+            width: 100%;
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+   <table border="1">
+       <tr>
+           <td colspan="4">
+               <input type="text" id="result">
+           </td>
+       </tr>
+       <tr>
+           <td>
+               <input type="button" value="9" onclick="row('9')">
+           </td>
+           <td>
+            <input type="button" value="8" onclick="row('8')">
+        </td>
+        <td>
+            <input type="button" value="7" onclick="row('7')">
+        </td>
+        <td>
+            <input type="button" value="C" onclick="clr()">
+        </td>
+       </tr>
+       <tr>
+           <td>
+               <input type="button" value="4" onclick="row('4')">
+           </td>
+           <td>
+            <input type="button" value="5" onclick="row('5')">
+        </td>
+        <td>
+            <input type="button" value="6" onclick="row('6')">
+        </td>
+        <td>
+            <input type="button" value="&#10006" onclick="del()" style="color: rgba(231, 12, 12, 0.76);">
+        </td>
+       </tr>
+       <tr>
+           <td>
+               <input type="button" value="1" onclick="row('1')">
+           </td>
+           <td>
+            <input type="button" value="2" onclick="row('2')">
+        </td>
+        <td>
+            <input type="button" value="3" onclick="row('3')">
+        </td>
+        <td>
+            <input type="button" value="/" onclick="row('/')">
+        </td>
+       </tr>
+       <tr>
+           <td>
+               <input type="button" value="." onclick="row('.')">
+           </td>
+           <td>
+            <input type="button" value="0" onclick="row('0')">
+        </td>
+        <td>
+            <input type="button" value="%" onclick="row('%')">
+        </td>
+        <td>
+            <input type="button" value="*" onclick="row('*')">
+        </td>
+       </tr>
+       <tr>
+           <td>
+               <input type="button" value="+" onclick="row('+')">
+           </td>
+           <td>
+            <input type="button" value="-" onclick="row('-')">
+        </td>
+        <td colspan="2">
+            <input type="button" value="=" onclick="solve()">
+        </td>
+       </tr>
+   </table>
+   <p><B style="color: blue; font-size: 25px;">Simple Calculator</B></p>
+            <p style="padding-left: 80px;">with</p>
+  <p style="font-size: 20px;"><b>HTML CSS</b> and <B>JAVASCRIPT</B>
+</p>
+</body>
+</html>
